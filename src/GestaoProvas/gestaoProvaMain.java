@@ -12,11 +12,17 @@ public class gestaoProvaMain extends JFrame{
     private JButton consultarProvaButton;
     private JButton editarProvaButton;
 
-    public gestaoProvaMain() {
-    voltarButton.addActionListener(new ActionListener() {
+    public gestaoProvaMain(String title) {
+        super(title);
+        setContentPane(painelPrincipal);
+        pack();
+
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        voltarButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            dispose();
         }
     });
     eliminarProvaButton.addActionListener(new ActionListener() {

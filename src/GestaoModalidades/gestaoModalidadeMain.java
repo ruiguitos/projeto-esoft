@@ -12,11 +12,19 @@ public class gestaoModalidadeMain extends JFrame {
     private JButton consultarModalidadesButton;
     private JButton historicoEPremiosEButton;
     private JButton voltarButton;
-public gestaoModalidadeMain() {
+    private JPanel painelPrincipal;
+
+    public gestaoModalidadeMain(String title) {
+
+    super(title);
+    setContentPane(painelPrincipal);
+    pack();
+    setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+
     voltarButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            dispose();
         }
     });
     historicoEPremiosEButton.addActionListener(new ActionListener() {

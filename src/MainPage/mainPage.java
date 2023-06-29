@@ -20,7 +20,7 @@ public class mainPage extends JFrame {
         setContentPane(painelPrincipal);
         pack();
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 
         adminButton.addActionListener(new ActionListener() {
             @Override

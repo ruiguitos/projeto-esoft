@@ -1,5 +1,10 @@
 package MainPage;
 
+import GestaoAtletas.gestaoAtletaMain;
+import GestaoEventos.gestaoEventoMain;
+import GestaoModalidades.gestaoModalidadeMain;
+import GestaoProvas.gestaoProvaMain;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +28,7 @@ public class mainStaff extends JFrame {
         setContentPane(painelPrincipal);
         pack();
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         sairButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -33,16 +38,14 @@ public class mainStaff extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mainAdmin adminForm = new mainAdmin("Admin Form");
-                adminForm.dispose(); // Close the current adminForm
-                mainPage mainPage = new mainPage("Página Principal");
-                mainPage.setVisible(true);
+                dispose();
             }
         });
         gestãoDeModalidadesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                gestaoModalidadeMain adminForm = new gestaoModalidadeMain("Gestão de Modalidades");
+                adminForm.setVisible(true);
             }
         });
         alterarDadosPessoaisButton.addActionListener(new ActionListener() {
@@ -54,19 +57,22 @@ public class mainStaff extends JFrame {
         gestãoDeEventosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                gestaoEventoMain adminForm = new gestaoEventoMain("Gestão de Eventos");
+                adminForm.setVisible(true);
             }
         });
         gestaoDeProvasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                gestaoProvaMain adminForm = new gestaoProvaMain("Gestão de Provas");
+                adminForm.setVisible(true);
             }
         });
         gestãoDeAtletasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                gestaoAtletaMain adminForm = new gestaoAtletaMain("Gestão de Atletas");
+                adminForm.setVisible(true);
             }
         });
         editarDadosButton.addActionListener(new ActionListener() {
